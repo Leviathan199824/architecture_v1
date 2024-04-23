@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User List</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="list">
+      <h1 class="roboto-slab">Lista de Usuarios</h1>
+      <hr>
+      <table class="w3-table w3-bordered">
+        <tr class="oswald-font">
+          <td class="fila">Id</td>
+          <td class="fila">Nombre</td>
+          <td class="fila">email</td>
+          <td class="fila">Opciones</td>
+        </tr>
+        <% users.forEach(user=> { %>
+          <tr>
+            <td>
+              <%= user.id %>
+            </td>
+            <td>
+              <%= user.name %>
+            </td>
+            <td>
+              <%= user.email %>
+            </td>
+            <td>
+              <button class="btn-eliminar" onclick="eliminarUsuario('<%= user.id %>','<%= user.name %>' )">eliminar</button>
+            </td>
+          </tr>
+          <% }); %>
+      </table>
+    </div>
+    <div class="agregarUser">
+      <h2 class="roboto-slab">Formulario para agregar nuevo usuario</h2>
+      <hr>
+      <form action="/compas/users" method="POST">
+        <div class="campo">
+          <label class="oswald-font">Nombre: </label><input type="text" name="name" placeholder="Nombre" required>
+        </div>
+        <br>
+        <div class="campo">
+          <label class="oswald-font">Correo: </label><input type="email" name="email" placeholder="Correo" required>
+        </div>
+        <br>
+        <button type="submit" class="btn" class="roboto-slab">Agregar Usuario</button>
+      </form>
+    </div>
+  </div>
+  <script src="/script.js"></script>
+</body>
+
+</html>

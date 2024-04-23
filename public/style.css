@@ -1,0 +1,94 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+.list{
+    background-color: #f6fff8;
+    padding: 15px;
+    width: 700px;
+    border: 1px solid  #ded5d5;
+    border-radius: 15px;
+    box-shadow: 5px 10px 8px #888888;
+}
+.list h1{
+    text-align: center;
+}
+.agregarUser{
+    background-color: #f6fff8;
+    padding: 15px;
+    width: 500px;
+    border: 1px solid  #ded5d5;
+    border-radius: 15px;
+    box-shadow: 5px 10px 8px #888888;
+    
+}
+.agregarUser h2{ 
+    text-align: center;
+}
+.fila{
+    background-color: #00a896;
+}
+td{
+    background-color: #eaf4f4;
+    padding: 5px;
+    width: 25%;
+    text-align: center;
+    vertical-align: baseline;
+    /*border-bottom: 1px solid black;
+    border-right: 1px solid #000;*/
+    border-collapse: collapse;
+}
+.oswald-font {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  margin-top:10px;
+}
+/*
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+*/
+.roboto-slab {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.campo{
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+input{
+    background-color: #eaf4f4;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid  #ded5d5;
+    font-size: 18px; 
+}
+.btn{
+    color:white;
+    background-color: #008000;
+    width: 100%;
+    border-top:20px;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+.btn-eliminar{
+    background-color:  #d90429;
+    color: aliceblue;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}

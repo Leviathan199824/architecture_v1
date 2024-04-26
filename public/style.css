@@ -35,9 +35,7 @@ td{
     padding: 5px;
     width: 25%;
     text-align: center;
-    vertical-align: baseline;
-    /*border-bottom: 1px solid black;
-    border-right: 1px solid #000;*/
+    align-content: center;
     border-collapse: collapse;
 }
 .oswald-font {
@@ -71,7 +69,7 @@ input{
     border: 1px solid  #ded5d5;
     font-size: 18px; 
 }
-.btn{
+.btnq{
     color:white;
     background-color: #008000;
     width: 100%;
@@ -83,7 +81,9 @@ input{
     border: none;
     cursor: pointer;
 }
+
 .btn-eliminar{
+    width: 100%;
     background-color:  #d90429;
     color: aliceblue;
     border-radius: 4px;
@@ -91,4 +91,25 @@ input{
     font-size: 15px;
     border: none;
     cursor: pointer;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.btn-editar{
+    width: 100%;
+    background-color:  #38b000;
+    color: aliceblue;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.subtitulo{
+    margin-left: 10px;
+}
+.identiti{
+    margin-top: 8px;
+    text-align: center;
 }

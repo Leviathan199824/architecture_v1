@@ -41,3 +41,23 @@ exports.deleteUserById = async (req,res)=>{
         res.status(500).send('Error al eliminar usuario.');
     }
 };
+
+//editar usuario 
+exports.updateUserById = async (req,res)=>{
+    console.log("entro al modulo de actualizacion")
+    const Id = req.params.id;
+    //console.log(id+"------");
+    const nombre = req.body.name;
+    const correo = req.body.email;
+    console.log(nombre+"----"+correo);
+    const newData = {name:nombre,email:correo};
+    try{
+        const update = await UserModel.findOneAndUpdate({_id:Id}, newData,{new:true});
+        if(!update){
+            return res.status(404).send('Usuario no encontrado');
+        }
+        res.status(200).send('exito');
+    }catch(err){
+        console.log("Error: " + err);
+    }
+};

@@ -15,3 +15,31 @@ function eliminarUsuario(id,name) {
         });
     }
 }
+
+function capturarID(id){
+        document.getElementById("identificador").innerHTML=id; 
+}
+async function updateId(){
+    const name = document.getElementById('name').value; 
+    const email = document.getElementById('email').value;
+    const id = document.getElementById('identificador').textContent;
+    console.log(name+" "+email+" "+id);
+    const obj ={name:name,email:email};
+    //document.getElementById("respuesta").innerHTML=name+" "+email+" "+id;
+    try{
+        const response =  await fetch(`http://localhost:3000/compas/users/${id}`,{
+            method: 'PUT',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(obj),
+        });
+        if(response.ok){
+            console.log('Registro editado exitosamente');
+        }else{
+            console.log('Error al editar el registro:',response.status);
+        }
+    }catch(err){
+        console.log('Error al editar el registro',err);
+    }
+}
